@@ -18,6 +18,12 @@ exports.build = {
             dir: 'server',
             subDir: false,
             fileName: 'app',
+        }, 
+        {
+            taskName: 'www',
+            dir: 'server/bin',
+            subDir: false,
+            fileName: 'www'
         }
         ]
     }

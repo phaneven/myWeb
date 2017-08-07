@@ -7,4 +7,4 @@ app.get('/', function(req, res){
 
 
 
-export = app;
+export default app;
