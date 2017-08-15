@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/server/bin/www.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/debug": "0.0.30",
     "@types/express": "^4.0.36",
+    "@types/morgan": "^1.7.32",
     "@types/node": "^8.0.19",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.1",
@@ -18,7 +20,9 @@
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
+    "debug": "^3.0.0",
     "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "typings": "^2.1.1"
   }
 }

@@ -3,9 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app_js_1 = require("../app.js");
 const debug = require("debug");
 const http = require("http");
+debug('ts-express:server');
 let port = normalizePort(process.env.PORT || '3000');
 //create http server
-let server = http.createServer(app_js_1.default);
+const server = http.createServer(app_js_1.default);
+app_js_1.default.set('port', port);
 //listen to the port
 server.listen(port);
 server.on('error', onError);
@@ -16,13 +18,11 @@ server.on('listening', onListening);
 function normalizePort(val) {
     let port = parseInt(val, 10);
     if (isNaN(port)) {
-        // named pipe
         return val;
-    }
+    } // named pipe
     if (port >= 0) {
-        // port number
         return port;
-    }
+    } // port number
     return false;
 }
 /**
@@ -54,8 +54,7 @@ function onError(error) {
  */
 function onListening() {
     let addr = server.address();
-    let bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
+    let bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
     debug('Listening on ' + bind);
+    console.log('Listening on ' + bind);
 }
