@@ -1,17 +1,6 @@
 import * as express from "express";
 import * as logger from "morgan";
 
-// let app = express();
-// app.use();
-// app.get('/', function(req, res, next) {
-//   console.log('hi ');
-//   next();
-// })
-// app.get('/', function(req, res, next){
-//   res.send('hello world!');
-// });
-// export default app;
-
 class App {
     public express: express.Application;
     constructor() {
@@ -21,7 +10,7 @@ class App {
     }
 
     private middleware():void {
-        this.express.use(logger('dev'));
+        // this.express.use(logger('dev'));
     }
 
     private routes():void {

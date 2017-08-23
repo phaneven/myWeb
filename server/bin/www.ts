@@ -1,4 +1,4 @@
-import App from '../app.js';
+import App from '../app';
 import * as debug from 'debug';
 import * as http from 'http';
 debug('ts-express:server');
