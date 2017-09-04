@@ -2,6 +2,7 @@ const build = require('./global.js').build;
 const runSequence = require('run-sequence');
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
+const clean = require('gulp-clean')
 let tsProject = ts.createProject('tsconfig.json');
 
 
@@ -28,6 +29,11 @@ gulp.task('build', (callback)=>{
 		build.serverDirectories.tasks.map((item)=>{return item.taskName}),
 		callback
 	);
+})
+
+gulp.task('clean', ()=> {
+    return gulp.src('./build', {read: false})
+        .pipe(clean());
 })
 
 

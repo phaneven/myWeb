@@ -24,6 +24,12 @@ exports.build = {
             dir: 'server/bin',
             subDir: false,
             fileName: 'www'
+        },
+        {
+            taskName: 'utils',
+            dir: 'server/utils',
+            subDir: false,
+            fileName: 'Router'
         }
         ]
     }
