@@ -29,7 +29,7 @@ exports.build = {
             taskName: 'utils',
             dir: 'server/utils',
             subDir: false,
-            fileName: 'Router'
+            fileName: '*'
         }
         ]
     }
