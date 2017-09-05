@@ -24,9 +24,19 @@ build.serverDirectories.tasks.forEach((task) => {
 	})
 });
 
+build.clientDirectories.tasks.forEach((task) => {
+    let file = task.file ? task.file  : '*';
+    let src = ['./' + task.dir + (task.suDir ? '/**/' : '/') + (task.fileName ? task.fileName : '*') + '.' + file];
+    gulp.task(task.taskName, () => {
+        let runner = gulp.src(src);
+        return task.pipe(runner);
+    })
+});
+
 gulp.task('build', (callback)=>{
 	runSequence(
-		build.serverDirectories.tasks.map((item)=>{return item.taskName}),
+        build.serverDirectories.tasks.map((item)=>{return item.taskName}),
+        build.clientDirectories.tasks.map((item)=>{return item.taskName}),
 		callback
 	);
 })

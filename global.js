@@ -1,7 +1,13 @@
 const path = require("path");
+const gulp = require('gulp');
 const clientPath = path.join(__dirname, 'build/public');
 const serverPath = path.join(__dirname, 'build/server');
 
+exports.variables = {
+    rootPath: __dirname,
+    clientPath: clientPath,
+    serverPath: serverPath
+}
 
 exports.variables = {
     rootPath: __dirname,
@@ -31,6 +37,18 @@ exports.build = {
             subDir: false,
             fileName: '*'
         }
+        ]
+    },
+    clientDirectories: {
+        tasks: [
+            {
+                taskName: 'template',
+                dir: 'app/templates',
+                subDir: false,
+                pipe: (task) => {
+                    return task.pipe(gulp.dest('./build/public/templates'))
+                } 
+            }
         ]
     }
 }

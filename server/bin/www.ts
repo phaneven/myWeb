@@ -2,7 +2,7 @@ import App from '../app';
 import * as debug from 'debug';
 import * as http from 'http';
 debug('ts-express:server');
-let port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(process.env.PORT || '8888');
 
 //create http server
 const server = http.createServer(App);
@@ -51,7 +51,6 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
 function onListening() {
     let addr = server.address();
     let bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;

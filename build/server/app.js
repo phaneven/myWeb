@@ -1,11 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const path = require("path");
 const express = require("express");
+const pathInfo = require('../../global').variables;
 class App {
     constructor() {
         this.express = express();
+        this.setViewEngine();
         this.middleware();
         this.routes();
+    }
+    setViewEngine() {
+        this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
+        this.express.set('view engine', 'ejs');
     }
     middleware() {
         // this.express.use(logger('dev'));
@@ -13,7 +20,10 @@ class App {
     routes() {
         let router = express.Router();
         router.get('/', (req, res, next) => {
-            res.send('Hello World!');
+            // res.send(
+            //     'Hello World!'
+            // );
+            res.render('index', { title: 'The index page!' });
         });
         this.express.use('/', router);
     }
