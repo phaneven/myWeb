@@ -43,10 +43,10 @@ exports.build = {
         tasks: [
             {
                 taskName: 'template',
-                dir: 'app/templates',
+                dir: 'client/templates',
                 subDir: false,
                 pipe: (task) => {
-                    return task.pipe(gulp.dest('./build/public/templates'))
+                    return task.pipe(gulp.dest('./build/client/templates'))
                 } 
             }
         ]
