@@ -11,11 +11,17 @@ class App {
         this.routes();
     }
     setViewEngine() {
-        this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
-        this.express.set('view engine', 'ejs');
+        // this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
+        // this.express.set('view engine', 'ejs')
+        this.express.set('view engine', "ejs");
+        this.express.engine("html", require('ejs').renderFile);
     }
     middleware() {
         // this.express.use(logger('dev'));
+        this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
+        this.express.get('/', function (req, res) {
+            res.sendFile(pathInfo.rootPath + "client/myapp/dist/" + "index.html");
+        });
     }
     routes() {
         let router = express.Router();

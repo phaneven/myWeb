@@ -15,12 +15,17 @@ class App {
     }
 
     private setViewEngine():void {
-        this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
-        this.express.set('view engine', 'ejs')
+        // this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
+        // this.express.set('view engine', 'ejs')
+        this.express.set('view engine', "ejs");
+        // this.express.engine("html", require('ejs').renderFile);
     }
 
     private middleware():void {
-        // this.express.use(logger('dev'));
+        this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
+        this.express.get('/', function(req, res) {
+            res.sendFile(pathInfo.rootPath + "client/myapp/dist/" + "index.html")
+        });
     }
 
     private routes():void {

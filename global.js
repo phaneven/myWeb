@@ -1,6 +1,6 @@
 const path = require("path");
 const gulp = require('gulp');
-const clientPath = path.join(__dirname, 'build/public');
+const clientPath = path.join(__dirname, 'build/client');
 const serverPath = path.join(__dirname, 'build/server');
 
 exports.variables = {
