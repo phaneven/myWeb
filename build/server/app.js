@@ -14,24 +14,23 @@ class App {
         // this.express.set('views', path.join(pathInfo.clientPath, 'templates'));
         // this.express.set('view engine', 'ejs')
         this.express.set('view engine', "ejs");
-        this.express.engine("html", require('ejs').renderFile);
+        // this.express.engine("html", require('ejs').renderFile);
     }
     middleware() {
-        // this.express.use(logger('dev'));
         this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
         this.express.get('/', function (req, res) {
             res.sendFile(pathInfo.rootPath + "client/myapp/dist/" + "index.html");
         });
     }
     routes() {
-        let router = express.Router();
-        router.get('/', (req, res, next) => {
-            // res.send(
-            //     'Hello World!'
-            // );
-            res.render('index', { title: 'The index page!' });
-        });
-        this.express.use('/', router);
+        // let router = express.Router();
+        // router.get('/', (req, res, next) => {
+        //     // res.send(
+        //     //     'Hello World!'
+        //     // );
+        //     res.render('index', { title: 'The index page!' });
+        // });
+        // this.express.use('/', router);
     }
 }
 exports.default = new App().express;

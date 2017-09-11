@@ -39,16 +39,16 @@ exports.build = {
         }
         ]
     },
-    clientDirectories: {
-        tasks: [
-            {
-                taskName: 'template',
-                dir: 'client/templates',
-                subDir: false,
-                pipe: (task) => {
-                    return task.pipe(gulp.dest('./build/client/templates'))
-                } 
-            }
-        ]
-    }
+    // clientDirectories: {
+    //     tasks: [
+    //         {
+    //             taskName: 'template',
+    //             dir: 'client/templates',
+    //             subDir: false,
+    //             pipe: (task) => {
+    //                 return task.pipe(gulp.dest('./build/client/templates'))
+    //             } 
+    //         }
+    //     ]
+    // }
 }

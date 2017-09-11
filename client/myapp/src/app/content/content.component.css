@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+}
+  
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1d1d1d;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-family: "Allerta Stencil", Sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    line-height: 32px;
+    margin-bottom: 14px;
+}
+  
+h2 {
+    font-family: "Tangerine", serif;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 0px;
+}
+
+section.panel#intro {
+    width: 100%;
+    height: 100vh;
+}
+section.panel#intro article {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+section.panel#intro article header {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+section.panel#intro article header h1 {
+    color: #fff;
+}
+section.panel#intro article header h2 {
+    color: #999;
+}

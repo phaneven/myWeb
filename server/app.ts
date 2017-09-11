@@ -29,14 +29,14 @@ class App {
     }
 
     private routes():void {
-        let router = express.Router();
-        router.get('/', (req, res, next) => {
-            // res.send(
-            //     'Hello World!'
-            // );
-            res.render('index', { title: 'The index page!' });
-        });
-        this.express.use('/', router);
+        // let router = express.Router();
+        // router.get('/', (req, res, next) => {
+        //     // res.send(
+        //     //     'Hello World!'
+        //     // );
+        //     res.render('index', { title: 'The index page!' });
+        // });
+        // this.express.use('/', router);
     }
 }
 
