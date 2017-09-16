@@ -83,7 +83,6 @@ div.panel#full-screen-nav {
     -webkit-transition: all 800ms;
     transition: all 800ms;
     pointer-events: none;
-    z-index: 100;
 }
 
 div.panel#full-screen-nav.active {

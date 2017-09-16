@@ -4,7 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 import { HomeModule } from './home/home.module';
-
+/* route */
+import { routing, appRoutingProviders } from './app.routes';
 /* App Root*/
 import { AppComponent } from './app.component';
 
@@ -17,8 +18,9 @@ import { AppComponent } from './app.component';
         BrowserAnimationsModule,
         MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
         HomeModule,
+        routing, 
     ],
-    providers: [],
+    providers: [appRoutingProviders],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

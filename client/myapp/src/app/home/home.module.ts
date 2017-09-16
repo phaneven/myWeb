@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContentComponent } from './content/content.component'
 
+import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -16,12 +17,13 @@ import { ContentComponent } from './content/content.component'
     ],
     imports: [
         BrowserModule,
+        RouterModule,
         BrowserAnimationsModule,
         MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule
     ],
     exports: [
         HomeComponent,
-        // MenuComponent
+        MenuComponent
     ]
 })
 export class HomeModule { }
