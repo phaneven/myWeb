@@ -1,0 +1,13 @@
+#blog {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+#blog > * {
+    padding: 0px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}

@@ -6,14 +6,15 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
 import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContentComponent } from './content/content.component'
-
+// import { HomeDirective } from './home.directive'
 import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
         HomeComponent, 
         MenuComponent,
-        ContentComponent
+        ContentComponent,
+        // HomeDirective
     ],
     imports: [
         BrowserModule,

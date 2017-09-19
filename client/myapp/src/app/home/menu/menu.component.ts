@@ -6,7 +6,7 @@ import { ViewEncapsulation } from '@angular/core';
     selector: 'app-menu',
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.css'],
-    encapsulation: ViewEncapsulation.None
+    // encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent implements OnInit {
     private menuToggle = false;
@@ -14,15 +14,14 @@ export class MenuComponent implements OnInit {
     constructor(private router: ActivatedRoute ) { }
 
     ngOnInit() {
-
+    
     }
 
     toggleMenu() {
         this.menuToggle = !this.menuToggle;
     }
 
-    clickHome():any {
-        // this.router.navigateByUrl('../../home');
+    clickHome() {
         console.log(this.router.params);
         this.menuToggle = false;
     }
