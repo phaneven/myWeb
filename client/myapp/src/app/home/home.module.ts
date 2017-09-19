@@ -6,7 +6,6 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
 import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContentComponent } from './content/content.component'
-// import { HomeDirective } from './home.directive'
 import { Routes, RouterModule } from '@angular/router';
 
 @NgModule({
@@ -23,7 +22,7 @@ import { Routes, RouterModule } from '@angular/router';
         MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule
     ],
     exports: [
-        HomeComponent,
+        // HomeComponent,
         MenuComponent
     ]
 })

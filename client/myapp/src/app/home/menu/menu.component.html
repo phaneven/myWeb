@@ -16,7 +16,7 @@
     <nav id="nav">
         <ul>
             <li>
-                <a (click)="clickHome();">Home
+                <a [routerLink]='["/home"]' (click)="clickHome();">Home
                     <span class="desc">
                     </span>
                 </a>
@@ -45,7 +45,3 @@
         </ul>
     </nav>
 </div>
-<!-- <router-outlet name="main-page"></router-outlet> -->
-
-
-
