@@ -12,4 +12,5 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  tile = {cols: 3, rows: 1, color: 'black'}
 }

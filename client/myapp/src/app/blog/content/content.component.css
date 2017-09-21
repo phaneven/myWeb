@@ -18,6 +18,7 @@ ul {
 .blog-card {
     text-align: left;
     /* height: 300px; */
+    margin-bottom: 5vh;
+    position: static;
 }
-
 

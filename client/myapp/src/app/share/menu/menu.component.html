@@ -1,0 +1,19 @@
+<md-sidenav #sidenav class="example-sidenav" mode='side' (close)="onClose()">
+    <a md-button [routerLink]='["/home"]' (click)="clickLabel()">Home
+    </a>
+    <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog
+    </a>
+</md-sidenav>
+
+<div id="menu" (click)="toggleMenu();" [class.toggled]="menuToggle === true">
+    <ul>
+        <li>
+            <a>
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+                <span class="line l4"></span>
+            </a>
+        </li>
+    </ul>
+</div>

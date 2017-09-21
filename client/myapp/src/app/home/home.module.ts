@@ -1,17 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdSidenavModule,MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 /* App Root*/
 import { HomeComponent } from './home.component';
-import { MenuComponent } from './menu/menu.component';
+import { ShareModule } from '../share/share.module';
 import { ContentComponent } from './content/content.component'
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
         HomeComponent, 
-        MenuComponent,
         ContentComponent,
         // HomeDirective
     ],
@@ -19,11 +18,10 @@ import { Routes, RouterModule } from '@angular/router';
         BrowserModule,
         RouterModule,
         BrowserAnimationsModule,
-        MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule
+        ShareModule,
+        MdButtonModule, MdCardModule, MdSidenavModule,MdMenuModule, MdToolbarModule, MdIconModule
     ],
     exports: [
-        // HomeComponent,
-        MenuComponent
     ]
 })
 export class HomeModule { }

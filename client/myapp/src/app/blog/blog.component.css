@@ -1,13 +1,10 @@
-#blog {
-    display: -webkit-flex;
-    display: flex;  
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    text-align: center;
+.md-card-actions {
+    display: inline-block;
 }
 
-#blog > * {
-    padding: 0px;
-    -webkit-flex: 1 100%;
-    flex: 1 100%;
+.example-container {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
 }
