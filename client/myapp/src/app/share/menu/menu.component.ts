@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router'
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ViewEncapsulation, ViewChild } from '@angular/core';
 import { MdSidenav } from '@angular/material';
 
@@ -10,22 +10,23 @@ import { MdSidenav } from '@angular/material';
     // encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent implements OnInit {
-    private menuToggle = false;
+    public menuToggle = false;
     @ViewChild('sidenav') sidenav: MdSidenav;
 
-    constructor(private router: ActivatedRoute ) { }
+    constructor(private router: ActivatedRoute) { }
 
     ngOnInit() {
-        
+
     }
 
     toggleMenu() {
         this.menuToggle = !this.menuToggle;
         console.log(this.menuToggle);
-        if (this.menuToggle)
+        if (this.menuToggle) {
             this.sidenav.open();
-        else
+        } else {
             this.sidenav.close();
+        }
     }
 
     onClose() {

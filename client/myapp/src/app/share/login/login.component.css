@@ -1,0 +1,12 @@
+.login-button {
+    position: absolute;
+    right: 0;
+    top: 2.5vh; 
+    width: 40px;
+    height: 40px;
+    /* border: 1px white solid; */
+}
+
+.login-button i {
+    color: white;
+}

@@ -7,6 +7,6 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'blog', component: BlogComponent},
 ];
-  
-export const appRoutingProviders:any [] = [];
+
+export const appRoutingProviders: any [] = [];
 export const routing = RouterModule.forRoot(routes);

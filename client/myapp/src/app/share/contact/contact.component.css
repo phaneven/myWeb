@@ -1,0 +1,18 @@
+.contact-wrapper {
+    position: absolute;   
+    bottom: 2vh;
+    /* border: 1px solid black; */
+}
+/* .contact-wrapper a:hover, .contact-wrapper a:click{
+    text-decoration: none;
+} */
+
+a:link, a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    padding: 0vh;
+}
+
+a:link {
+    color:inherit;
+}

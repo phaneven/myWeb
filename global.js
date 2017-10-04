@@ -19,24 +19,36 @@ exports.build = {
     serverDirectories: {
         file: 'ts',
         tasks : [
-        {
-            taskName: 'app-start',
-            dir: 'server',
-            subDir: false,
-            fileName: 'app',
-        }, 
-        {
-            taskName: 'www',
-            dir: 'server/bin',
-            subDir: false,
-            fileName: 'www'
-        },
-        {
-            taskName: 'utils',
-            dir: 'server/utils',
-            subDir: false,
-            fileName: '*'
-        }
+            {
+                taskName: 'app-start',
+                dir: 'server',
+                subDir: false,
+                fileName: 'app',
+            }, 
+            {
+                taskName: 'www',
+                dir: 'server/bin',
+                subDir: false,
+                fileName: 'www'
+            },
+            {
+                taskName: 'utils',
+                dir: 'server/utils',
+                subDir: false,
+                fileName: '*'
+            }, 
+            {
+                taskName: 'routes',
+                dir: 'server/routes',
+                subDir: true,
+                fileName: '*'
+            },
+            {
+                taskName: 'core',
+                dir: 'server/core',
+                subDir: true,
+                fileName: '*'   
+            }
         ]
     },
     // clientDirectories: {

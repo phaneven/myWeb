@@ -6,3 +6,5 @@ backend part
 npm start -- start server  
 gulp build -- change ts to js  
 
+open db  
+mongod --dbpath=./data  

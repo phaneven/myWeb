@@ -5,7 +5,7 @@
     </a>
 </md-sidenav>
 
-<div id="menu" (click)="toggleMenu();" [class.toggled]="menuToggle === true">
+<div id="menu" (click)="toggleMenu();" [ngClass]="{toggled: menuToggle}">
     <ul>
         <li>
             <a>
