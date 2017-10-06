@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdCardModule, MdSidenavModule, 
-         MdListModule, MdTabsModule, MdInputModule, 
+import { MdButtonModule, MdCardModule, MdSidenavModule,
+         MdListModule, MdTabsModule, MdInputModule,
          MdDialogModule, MdFormFieldModule } from '@angular/material';
 
 
 @NgModule ({
     imports: [
-        MdButtonModule, 
-        MdCardModule, 
+        MdButtonModule,
+        MdCardModule,
         MdSidenavModule,
         MdListModule,
         MdTabsModule,
@@ -16,8 +16,8 @@ import { MdButtonModule, MdCardModule, MdSidenavModule,
         MdFormFieldModule
     ],
     exports: [
-        MdButtonModule, 
-        MdCardModule, 
+        MdButtonModule,
+        MdCardModule,
         MdSidenavModule,
         MdListModule,
         MdTabsModule,

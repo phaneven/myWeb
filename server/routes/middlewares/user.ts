@@ -15,9 +15,9 @@ let login = async (req, res) => {
     let err = connector.error();
 
     if (user) {
-        res.send({Message: 'login'})
+        res.send({Message: 'login', status: 'verified'});
     } else {
-        res.send({Message: 'user cannot find'})
+        res.send({Message: 'user cannot find'});
     }
 }
 

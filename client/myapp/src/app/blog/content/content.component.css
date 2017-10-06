@@ -1,13 +1,14 @@
 hr {
     width: 70%;
 }
-div {
-    height: 100vh;
+#blog-content {
+    overflow: auto;
+    height: 150vh;
     width: 70%;
     margin: 0 auto;
     padding: 0;
     margin-top: 2vh;
-    background-color: grey; 
+    /* background-color: grey;  */
 }
 
 ul {

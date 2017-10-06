@@ -20,7 +20,7 @@ let login = (req, res) => __awaiter(this, void 0, void 0, function* () {
     let user = connector.value();
     let err = connector.error();
     if (user) {
-        res.send({ Message: 'login' });
+        res.send({ Message: 'login', status: 'verified' });
     }
     else {
         res.send({ Message: 'user cannot find' });

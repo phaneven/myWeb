@@ -71,31 +71,11 @@
 }
 
 #menu.toggled ul li a span {
-    background-color: #000;
+    background-color: #BDBDBD;
 }
 
 #menu.toggled ul li span.l4 {
     transform: translateY(-5px) translateX(0px) rotate(-45deg);
 }
 
-/* sidenav */
-.example-sidenav-content {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-.example-sidenav {
-    padding-top: 20%;
-    /* width: 300px; */
-    min-width: 200px;
-    height: 100vh;
-}
 
-.example-sidenav a {
-    text-align: left;
-    min-width: 100%;
-    padding-left: 80px;
-}

@@ -5,8 +5,8 @@ import { MdButtonModule, MdCardModule, MdSidenavModule, MdGridListModule} from '
 
 import { BlogComponent } from './blog.component';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component'
-
+import { ContentComponent } from './content/content.component';
+import { RouterModule } from '@angular/router';
 import { ShareModule } from '../share/share.module';
 
 @NgModule({
@@ -14,6 +14,7 @@ import { ShareModule } from '../share/share.module';
         CommonModule,
         BrowserAnimationsModule,
         ShareModule,
+        RouterModule,
         MdCardModule,
         MdButtonModule,
         MdSidenavModule,
@@ -23,10 +24,9 @@ import { ShareModule } from '../share/share.module';
         BlogComponent,
         HeaderComponent,
         ContentComponent,
-    ], 
+    ],
     exports: [
         HeaderComponent
     ]
-    
 })
 export class BlogModule { }

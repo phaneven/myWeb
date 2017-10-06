@@ -1,7 +1,8 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterContentInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { ViewEncapsulation, ViewChild } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { EmitterService } from '../../emitter.service';
+// import { ViewEncapsulation, ViewChild } from '@angular/core';
+// import { MdSidenav } from '@angular/material';
 
 @Component({
     selector: 'app-menu',
@@ -9,32 +10,23 @@ import { MdSidenav } from '@angular/material';
     styleUrls: ['./menu.component.css'],
     // encapsulation: ViewEncapsulation.None
 })
-export class MenuComponent implements OnInit {
-    public menuToggle = false;
-    @ViewChild('sidenav') sidenav: MdSidenav;
-
+export class MenuComponent implements AfterContentInit {
+    // @ViewChild('sidenav') sidenav: MdSidenav;
+    public menuToggle: boolean;
+    @Output() id = 'menu';
+    @Input() toggle: boolean;
     constructor(private router: ActivatedRoute) { }
-
-    ngOnInit() {
-
-    }
 
     toggleMenu() {
         this.menuToggle = !this.menuToggle;
-        console.log(this.menuToggle);
-        if (this.menuToggle) {
-            this.sidenav.open();
-        } else {
-            this.sidenav.close();
-        }
+        EmitterService.get(this.id).emit(this.menuToggle);
     }
 
-    onClose() {
-        this.menuToggle = false;
+    ngAfterContentInit() {
+        EmitterService.get('_menu')
+            .subscribe(value => {
+                this.menuToggle = value; console.log('value ' + value);
+            });
     }
 
-    clickLabel() {
-        this.sidenav.close();
-        this.menuToggle = false;
-    }
 }

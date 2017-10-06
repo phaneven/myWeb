@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyOwnCustomMaterialModule } from '../material.module';
+import { MyOwnCustomMaterialModule } from '../material-module';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 // import { HttpClientModule } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { HttpModule } from '@angular/http';
 import { MenuComponent } from './menu/menu.component';
 import { PortraitComponent } from './portrait/portrait.component';
 import { ContactComponent } from './contact/contact.component';
-import { LoginComponent, LoginDialogComponent } from './login/login.component'
+import { LoginComponent, LoginDialogComponent } from './login/login.component';
 
 @NgModule({
     imports: [

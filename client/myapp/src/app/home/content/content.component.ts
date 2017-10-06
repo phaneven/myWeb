@@ -9,12 +9,11 @@ import { ViewEncapsulation } from '@angular/core';
 export class ContentComponent implements OnInit {
     title: string;
     subTitle: string;
-    
     constructor() { }
 
     ngOnInit() {
-        this.title = "Phaneven"
-        this.subTitle = "Ping.F's website"
+        this.title = 'Phaneven',
+        this.subTitle = 'Ping.F\'s website';
     }
 }
 

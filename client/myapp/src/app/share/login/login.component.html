@@ -1,4 +1,5 @@
 <div class="login-button">
-    <i type="button" class="fa fa-sign-in" aria-hidden="true" (click)="openDialog();"></i>
+    <!-- <i type="button" class="fa fa-sign-in" aria-hidden="true" (click)="openDialog();"></i> -->
+    <i type="button" class="login material-icons" (click)="openDialog();" [ngClass]="{toggled: isLogin}">person</i>
 </div>
 

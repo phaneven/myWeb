@@ -1,6 +1,21 @@
-/* #container {
-    width: 100%;
-    min-height: 500px;
-    background-color: '#fff';
-    border: 5px, solid, red;
-} */
+/* sidenav */
+.example-sidenav-content {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.example-sidenav {
+    /* padding-top: 20%; */
+    /* width: 300px; */
+    padding-top: 200px;
+    height: 100%;
+}
+
+.example-sidenav a {
+    text-align: left;
+    min-width: 100%;
+    padding-left: 50px;
+    
+}

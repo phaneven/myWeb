@@ -1,10 +1,35 @@
+/* sidenav */
+.example-sidenav-content {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.example-sidenav {
+    /* padding-top: 20%; */
+    /* width: 300px; */
+    padding-top: 200px;
+    height: 100%;
+}
+
+.example-sidenav a {
+    text-align: left;
+    min-width: 100%;
+    padding-left: 50px;
+    
+}
+
+/* blog */
 .md-card-actions {
     display: inline-block;
 }
 
 .example-container {
+    overflow: auto;
+    height: 100%;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: transparent;
     position: fixed;
 }

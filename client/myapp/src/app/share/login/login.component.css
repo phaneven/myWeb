@@ -1,12 +1,19 @@
 .login-button {
     position: absolute;
-    right: 0;
-    top: 2.5vh; 
+    right: 0.5vh;
+    top: 2vh; 
     width: 40px;
     height: 40px;
     /* border: 1px white solid; */
 }
 
 .login-button i {
-    color: white;
+    color: #BDBDBD;
+    cursor: default;
 }
+
+.login-button i:hover {
+    transition: all .4s ease;
+    color: #ffffff;
+}
+

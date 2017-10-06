@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class LoginComponent implements OnInit {
     username: string;
     password: string;
-
+    isLogin: boolean;
     constructor(public dialog: MdDialog) { }
 
     ngOnInit() {
@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
 })
 
 export class LoginDialogComponent {
+    public isLogin = false;
+    public messageInfo;
     constructor(
         public dialogRef: MdDialogRef<LoginDialogComponent>,
         @Inject(MD_DIALOG_DATA) public data: any, private http: Http) {}
@@ -56,9 +58,16 @@ export class LoginDialogComponent {
             .post('http://localhost:8888/blog/login', body)
             .map(res => res.json())
             .subscribe(
-                data => console.log(data),
+                data => {
+                    this.messageInfo = data;
+                    if (this.messageInfo.Message === 'login') {
+                        this.isLogin = true;
+                    }
+                    console.log(this.isLogin);
+                },
                 error => console.log(error)
             );
+        // console.log(this.messageInfo);
         this.dialogRef.close();
     }
 
