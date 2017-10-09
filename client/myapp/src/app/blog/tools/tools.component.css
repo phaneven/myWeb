@@ -1,0 +1,14 @@
+.tools {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    /* background-color: silver; */
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 500px) {
+    .tools{
+        width: 90%;
+    }
+}
+
