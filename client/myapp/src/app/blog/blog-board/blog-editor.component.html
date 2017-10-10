@@ -1,4 +1,11 @@
-<h1 md-dialog-title>Blog Editor</h1>
-<div md-dialog-content>
-</div>
+<div class="popup">
+    <h1 md-dialog-title>Blog Editor</h1>
+    <div md-dialog-content id="editor-container">
+        <quill-editor #editor theme="snow" [style]="{height: '300px'}"></quill-editor>
+    </div>
 
+    <div class='editor-button'>
+        <span class="spacer"></span>
+        <button md-raised-button color="warn" (click)="onClick();">Submit</button>
+    </div>
+</div>

@@ -11,7 +11,7 @@ import { routing, appRoutingProviders } from './app.routes';
 import { AppComponent } from './app.component';
 
 import { LoginDialogComponent } from './share/login/login.component';
-
+// import { QuillModule } from 'ngx-quill';
 
 @NgModule({
     declarations: [
@@ -24,6 +24,7 @@ import { LoginDialogComponent } from './share/login/login.component';
         BlogModule,
         BoardModule,
         routing,
+        // QuillModule
     ],
     exports: [
     ],

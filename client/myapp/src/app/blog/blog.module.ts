@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ShareModule } from '../share/share.module';
 import { ToolsComponent } from './tools/tools.component';
 import { BlogBoardComponent, BlogEditorComponent } from './blog-board/blog-board.component';
-
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
     imports: [
@@ -18,7 +18,8 @@ import { BlogBoardComponent, BlogEditorComponent } from './blog-board/blog-board
         BrowserAnimationsModule,
         ShareModule,
         RouterModule,
-        MyOwnCustomMaterialModule
+        MyOwnCustomMaterialModule,
+        QuillModule
     ],
     declarations: [
         BlogComponent,

@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input, ViewChild } from '@angular/core';
 import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
 
 @Component({
     // tslint:disable-next-line:component-selector
@@ -8,8 +9,6 @@ import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
     styleUrls: ['./blog-board.component.css']
 })
 export class BlogBoardComponent implements OnInit {
-    username: string;
-    password: string;
     constructor(public dialog: MdDialog) { }
 
     ngOnInit() {
@@ -18,8 +17,7 @@ export class BlogBoardComponent implements OnInit {
     openDialog() {
         const dialogRef = this.dialog.open(BlogEditorComponent, {
             width: '80%',
-            height: '520px',
-            data: { username: this.username, password: this.password}
+            height: '550px',
         });
     }
 
@@ -29,15 +27,23 @@ export class BlogBoardComponent implements OnInit {
     // tslint:disable-next-line:component-selector
     selector: 'blog-editor',
     templateUrl: 'blog-editor.component.html',
+    styleUrls: ['./blog-editor.component.css']
 })
 
-export class BlogEditorComponent {
-    public isLogin = false;
+export class BlogEditorComponent implements OnInit {
+    @ViewChild('editor') editor: QuillEditorComponent;
     public messageInfo;
     constructor(
         public dialogRef: MdDialogRef<BlogEditorComponent>,
         @Inject(MD_DIALOG_DATA) public data: any) {}
 
+    ngOnInit(): void {
+        this.editor.onContentChanged.subscribe(data => this.editor.content = data);
+    }
+
+    onClick () {
+        console.log(this.editor.content);
+    }
 }
 
 
