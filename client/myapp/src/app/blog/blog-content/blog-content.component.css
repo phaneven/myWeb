@@ -1,0 +1,26 @@
+#blog-content {
+    flex: 1;
+    height: 150vh;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgb(128, 128, 128); 
+}
+
+@media only screen and (max-width: 500px) {
+    #blog-content {
+        width: 90%;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+.blog-card {
+    text-align: left;
+    height: 200px;
+    margin-bottom: 5vh;
+    position: static;
+}
+

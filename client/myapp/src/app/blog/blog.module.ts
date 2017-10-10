@@ -5,11 +5,12 @@ import { MyOwnCustomMaterialModule} from '../material-module';
 
 import { BlogComponent } from './blog.component';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
+import { BlogContentComponent } from './blog-content/blog-content.component';
 import { RouterModule } from '@angular/router';
 import { ShareModule } from '../share/share.module';
 import { ToolsComponent } from './tools/tools.component';
-import { BoardComponent } from './board/board.component';
+import { BlogBoardComponent, BlogEditorComponent } from './blog-board/blog-board.component';
+
 
 @NgModule({
     imports: [
@@ -22,12 +23,12 @@ import { BoardComponent } from './board/board.component';
     declarations: [
         BlogComponent,
         HeaderComponent,
-        ContentComponent,
+        BlogContentComponent,
         ToolsComponent,
-        BoardComponent,
+        BlogBoardComponent,
+        BlogEditorComponent
     ],
-    exports: [
-        HeaderComponent
-    ]
+    exports: [],
+    entryComponents: [BlogEditorComponent]
 })
 export class BlogModule { }

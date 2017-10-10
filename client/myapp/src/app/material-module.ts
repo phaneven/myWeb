@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MdButtonModule, MdCardModule, MdSidenavModule,
          MdListModule, MdTabsModule, MdInputModule,
-         MdDialogModule, MdFormFieldModule, MdSlideToggleModule } from '@angular/material';
+         MdDialogModule, MdFormFieldModule, MdSlideToggleModule, MdToolbarModule } from '@angular/material';
 
 
 @NgModule ({
@@ -14,7 +14,8 @@ import { MdButtonModule, MdCardModule, MdSidenavModule,
         MdDialogModule,
         MdInputModule,
         MdFormFieldModule,
-        MdSlideToggleModule
+        MdSlideToggleModule,
+        MdToolbarModule
     ],
     exports: [
         MdButtonModule,
@@ -25,7 +26,8 @@ import { MdButtonModule, MdCardModule, MdSidenavModule,
         MdDialogModule,
         MdInputModule,
         MdFormFieldModule,
-        MdSlideToggleModule
+        MdSlideToggleModule,
+        MdToolbarModule
     ]
 })
 
