@@ -1,11 +1,11 @@
 <md-sidenav-container>
     <md-sidenav #sidenav class="example-sidenav" mode='over' (close)="onClose()">
-        <a md-button [routerLink]='["/home"]' (click)="clickLabel()">Home
+        <a md-button [routerLink]='["/home"]' (click)="clickLabel();">Home
         </a>
         <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog
         </a>
-        <a md-button [routerLink]='["/board"]' (click)="clickLabel()">Board
-        </a>
+        <!-- <a md-button [routerLink]='["/board"]'>Board
+        </a> -->
     </md-sidenav>
     <app-menu></app-menu>
     <app-content></app-content> 

@@ -9,6 +9,7 @@ import { MdSidenav } from '@angular/material';
 })
 export class BlogComponent implements AfterContentInit {
     public menuToggle: boolean;
+    public mode: string;
     @ViewChild('sidenav') sidenav: MdSidenav;
     @Input() toggle: boolean;
     @Output() id = '_menu';
@@ -32,4 +33,17 @@ export class BlogComponent implements AfterContentInit {
             });
     }
 
+    setMode(event) {
+        const width = event.target.innerWidth;
+        if (width < 800) {
+            this.mode = 'over';
+        } else {
+            this.mode = 'side';
+        }
+    }
+
+    clickLabel() {
+        this.sidenav.close();
+        this.menuToggle = false;
+    }
 }

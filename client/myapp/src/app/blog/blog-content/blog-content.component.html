@@ -1,6 +1,6 @@
 <div id="blog-content">
     <ul>
-        <li *ngFor="let article of articles">
+        <li *ngFor="let article of choosedArticles">
             <md-card class="blog-card" role="group">
                 <md-card-header>
                     <md-card-title>Shiba Inu</md-card-title>
@@ -15,4 +15,5 @@
             </md-card>
         </li>
     </ul>
+    <md-paginator [length]="length" [(pageSize)]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onChange($event)"></md-paginator>
 </div>

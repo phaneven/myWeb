@@ -22,10 +22,10 @@ export class HomeComponent implements AfterContentInit {
         EmitterService.get(this.id).emit(this.menuToggle);
     }
 
-    // clickLabel() {
-    //     this.sidenav.close();
-    //     this.menuToggle = false;
-    // }
+    clickLabel() {
+        this.sidenav.close();
+        this.menuToggle = false;
+    }
 
     ngAfterContentInit() {
         EmitterService.get('menu')

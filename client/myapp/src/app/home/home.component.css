@@ -9,13 +9,16 @@
 .example-sidenav {
     /* padding-top: 20%; */
     /* width: 300px; */
+    display: flex;
+    flex-direction: column;
+    width: 250px;
     padding-top: 200px;
-    height: 100%;
 }
 
 .example-sidenav a {
+    color: cornflowerblue;
     text-align: left;
-    min-width: 100%;
-    padding-left: 50px;
+    padding-left: 50px; 
     
 }
+
