@@ -1,6 +1,6 @@
 <app-contact></app-contact>
 <md-sidenav-container id='blog-content'>
-    <md-sidenav #sidenav class="blog-sidenav" mode='over' (close)="onClose()">
+    <md-sidenav #sidenav class="blog-sidenav" mode='side' (close)="onClose()">
         <a md-button [routerLink]='["/home"]' (click)="clickLabel()">Home</a>
         <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog</a>
         <a md-button [routerLink]='["/board"]' (click)="clickLabel()">Board</a>

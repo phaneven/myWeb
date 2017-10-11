@@ -3,6 +3,7 @@ import * as express from "express";
 import * as logger from "morgan";
 import * as ejs from 'ejs';
 import ServerRequestRouter from './routes/middlewares/user';
+import ServerArticleRouter from './routes/middlewares/article'; 
 const bodyParser = require('body-parser');
 var history = require('connect-history-api-fallback'); // make browser could refresh
 
@@ -41,6 +42,8 @@ class App {
         this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
         this.express.use(ServerRequestRouter[0].Path, ServerRequestRouter[0].Router); //registration
         this.express.use(ServerRequestRouter[1].Path, ServerRequestRouter[1].Router); //login
+        this.express.use(ServerArticleRouter[0].Path, ServerArticleRouter[0].Router); //add article
+        this.express.use(ServerArticleRouter[1].Path, ServerArticleRouter[1].Router);
     }
 
     private routes():void {

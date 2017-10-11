@@ -4,6 +4,7 @@ const path = require("path");
 const express = require("express");
 const ejs = require("ejs");
 const user_1 = require("./routes/middlewares/user");
+const article_1 = require("./routes/middlewares/article");
 const bodyParser = require('body-parser');
 var history = require('connect-history-api-fallback'); // make browser could refresh
 // database
@@ -36,6 +37,8 @@ class App {
         this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
         this.express.use(user_1.default[0].Path, user_1.default[0].Router); //registration
         this.express.use(user_1.default[1].Path, user_1.default[1].Router); //login
+        this.express.use(article_1.default[0].Path, article_1.default[0].Router); //add article
+        this.express.use(article_1.default[1].Path, article_1.default[1].Router);
     }
     routes() {
         let router = express.Router();

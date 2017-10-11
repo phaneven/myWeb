@@ -1,24 +1,21 @@
-.popup {
+/* .popup {
     height: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
+    background-color: grey; 
+} */
 
-.editor-container {
-    /* display: flex; */
-    height: 400px;
-}
 .editor-button {
     display: flex;
-    margin-top: 5px;
+    margin-top: 20px;
     position: relative;
-    /* border: 1px, black, solid; */
     /* background-color: grey; */
 }
 .spacer {
     flex: 1 1 auto;
 }
 
-quill-editor {
+/* #editor {
     height: 320px;
-}
+} */
