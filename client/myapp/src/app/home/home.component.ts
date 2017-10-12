@@ -10,11 +10,18 @@ import { EmitterService } from '../emitter.service';
 })
 export class HomeComponent implements AfterContentInit {
     public menuToggle: boolean;
+    public mode: string;
     @ViewChild('sidenav') sidenav: MdSidenav;
     @Input() toggle: boolean;
     @Output() id = '_menu';
     constructor() {
         // EmitterService.get('menu').subscribe(value => console.log('event:' + value));
+        const width = window.innerWidth;
+        if (width < 500) {
+            this.mode = 'over';
+        } else {
+            this.mode = 'side';
+        }
     }
 
     onClose() {
@@ -38,5 +45,15 @@ export class HomeComponent implements AfterContentInit {
                     this.sidenav.close();
                 }
             });
+    }
+
+    setMode(event) {
+        // tslint:disable-next-line:prefer-const
+        let width = event.target.innerWidth;
+        if (width < 500) {
+            this.mode = 'over';
+        } else {
+            this.mode = 'side';
+        }
     }
 }

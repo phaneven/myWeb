@@ -1,5 +1,5 @@
 <md-sidenav-container>
-    <md-sidenav #sidenav class="example-sidenav" mode='over' (close)="onClose()">
+    <md-sidenav #sidenav class="example-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
         <a md-button [routerLink]='["/home"]' (click)="clickLabel();">Home
         </a>
         <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog

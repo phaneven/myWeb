@@ -13,7 +13,14 @@ export class BlogComponent implements AfterContentInit {
     @ViewChild('sidenav') sidenav: MdSidenav;
     @Input() toggle: boolean;
     @Output() id = '_menu';
-    constructor() {}
+    constructor() {
+        const width = window.innerWidth;
+        if (width < 500) {
+            this.mode = 'over';
+        } else {
+            this.mode = 'side';
+        }
+    }
 
     onClose() {
         this.menuToggle = false;
@@ -35,7 +42,7 @@ export class BlogComponent implements AfterContentInit {
 
     setMode(event) {
         const width = event.target.innerWidth;
-        if (width < 800) {
+        if (width < 500) {
             this.mode = 'over';
         } else {
             this.mode = 'side';
