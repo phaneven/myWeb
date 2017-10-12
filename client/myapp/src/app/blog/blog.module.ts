@@ -5,7 +5,7 @@ import { MyOwnCustomMaterialModule} from '../material-module';
 
 import { BlogComponent } from './blog.component';
 import { HeaderComponent } from './header/header.component';
-import { BlogContentComponent } from './blog-content/blog-content.component';
+import { BlogContentComponent, SafeHtmlPipe } from './blog-content/blog-content.component';
 import { RouterModule } from '@angular/router';
 import { ShareModule } from '../share/share.module';
 import { ToolsComponent } from './tools/tools.component';
@@ -27,7 +27,8 @@ import { QuillModule } from 'ngx-quill';
         BlogContentComponent,
         ToolsComponent,
         BlogBoardComponent,
-        BlogEditorComponent
+        BlogEditorComponent,
+        SafeHtmlPipe
     ],
     exports: [],
     entryComponents: [BlogEditorComponent]

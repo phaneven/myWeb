@@ -5,11 +5,10 @@
         <a mat-button [routerLink]='["/home"]' (click)="clickLabel()">Home</a>
         <a mat-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog</a>
         <!-- <a mat-button [routerLink]='["/board"]'>Board</a> -->
-    </mat-sidenav>
-    
+    </mat-sidenav>  
     <app-login></app-login>
     <blog-header></blog-header>
     <blog-tools></blog-tools>
     <router-outlet></router-outlet>
-    <!-- <app-footer></app-footer> -->
+    <app-footer></app-footer>
 </mat-sidenav-container>

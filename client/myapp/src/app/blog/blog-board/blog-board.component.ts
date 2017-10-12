@@ -43,7 +43,8 @@ export class BlogEditorComponent implements OnInit {
     }
 
     onClick () {
-        console.log(this.editor.content.html);
+        // console.log(this.editor.content.html.content);
+        // console.log(this.editor.content);
         const body = {
             content: this.editor.content.html
         };
@@ -56,5 +57,4 @@ export class BlogEditorComponent implements OnInit {
         this.dialogRef.close();
     }
 }
-
 

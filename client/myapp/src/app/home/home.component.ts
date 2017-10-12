@@ -25,6 +25,7 @@ export class HomeComponent implements AfterContentInit {
     }
 
     onClose() {
+        console.log('aaaaa');
         this.menuToggle = false;
         EmitterService.get(this.id).emit(this.menuToggle);
     }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { Http } from '@angular/http';
 import { PageEvent } from '@angular/material/paginator';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     // tslint:disable-next-line:component-selector
@@ -25,7 +26,7 @@ export class BlogContentComponent implements OnInit {
                     console.log(this.articles);
                     this.length = this.articles.length;
                     this.choosedArticles = this.articles
-                        .slice(this.pageSize * this.currentPageIndex, this.pageSize  * (this.currentPageIndex + 1));
+                        .slice(this.pageSize * this.currentPageIndex, this.pageSize * (this.currentPageIndex + 1));
                 }
             );
     }
@@ -37,6 +38,14 @@ export class BlogContentComponent implements OnInit {
         // this.choosedArticles = this.articles.slice()
         console.log('PAGESIZE: ' + this.pageSize);
         this.choosedArticles = this.articles
-        .slice(this.pageSize * this.currentPageIndex, this.pageSize  * (this.currentPageIndex + 1));
+            .slice(this.pageSize * this.currentPageIndex, this.pageSize * (this.currentPageIndex + 1));
+    }
+}
+
+@Pipe({ name: 'safeHtml' })
+export class SafeHtmlPipe implements PipeTransform {
+    constructor(private sanitized: DomSanitizer) { }
+    transform(value) {
+        return this.sanitized.bypassSecurityTrustHtml(value);
     }
 }

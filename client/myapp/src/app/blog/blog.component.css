@@ -3,7 +3,7 @@
     display: flex;
     overflow: auto;
     flex-direction: column;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     background-color: white;
 }
 
@@ -24,4 +24,10 @@
     color: cornflowerblue;
     text-align: left;
     padding-left: 50px; 
+}
+
+app-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
 }
