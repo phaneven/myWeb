@@ -1,13 +1,15 @@
-<app-contact></app-contact>
-<md-sidenav-container id='blog-content'>
-    <md-sidenav #sidenav class="blog-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
-        <a md-button [routerLink]='["/home"]' (click)="clickLabel()">Home</a>
-        <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog</a>
-        <!-- <a md-button [routerLink]='["/board"]'>Board</a> -->
-    </md-sidenav>
-    <app-menu></app-menu>
+<!-- <app-contact></app-contact> -->
+<app-menu></app-menu>
+<mat-sidenav-container id='blog-content'>
+    <mat-sidenav #sidenav class="blog-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
+        <a mat-button [routerLink]='["/home"]' (click)="clickLabel()">Home</a>
+        <a mat-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog</a>
+        <!-- <a mat-button [routerLink]='["/board"]'>Board</a> -->
+    </mat-sidenav>
+    
     <app-login></app-login>
     <blog-header></blog-header>
     <blog-tools></blog-tools>
     <router-outlet></router-outlet>
-</md-sidenav-container>
+    <!-- <app-footer></app-footer> -->
+</mat-sidenav-container>

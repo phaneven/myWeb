@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PortraitComponent } from './portrait/portrait.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent, LoginDialogComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
@@ -29,12 +30,14 @@ import { LoginComponent, LoginDialogComponent } from './login/login.component';
         ContactComponent,
         LoginComponent,
         LoginDialogComponent,
+        FooterComponent,
     ],
     exports: [
         MenuComponent,
         PortraitComponent,
         ContactComponent,
         LoginComponent,
+        FooterComponent
     ]
 })
 export class ShareModule { }

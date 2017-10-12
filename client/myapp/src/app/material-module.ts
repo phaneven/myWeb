@@ -1,35 +1,38 @@
 import { NgModule } from '@angular/core';
-import { MdButtonModule, MdCardModule, MdSidenavModule,
-         MdListModule, MdTabsModule, MdInputModule,
-         MdDialogModule, MdFormFieldModule, MdSlideToggleModule, MdToolbarModule, MatPaginatorModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatSidenavModule,
+         MatListModule, MatTabsModule, MatInputModule,
+         MatDialogModule, MatFormFieldModule, MatSlideToggleModule, MatToolbarModule,
+         MatPaginatorModule, MatGridListModule } from '@angular/material';
 
 
 @NgModule ({
     imports: [
-        MdButtonModule,
-        MdCardModule,
-        MdSidenavModule,
-        MdListModule,
-        MdTabsModule,
-        MdDialogModule,
-        MdInputModule,
-        MdFormFieldModule,
-        MdSlideToggleModule,
-        MdToolbarModule,
-        MatPaginatorModule
+        MatButtonModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatListModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+        MatGridListModule
     ],
     exports: [
-        MdButtonModule,
-        MdCardModule,
-        MdSidenavModule,
-        MdListModule,
-        MdTabsModule,
-        MdDialogModule,
-        MdInputModule,
-        MdFormFieldModule,
-        MdSlideToggleModule,
-        MdToolbarModule,
-        MatPaginatorModule
+        MatButtonModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatListModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+        MatGridListModule
     ]
 })
 

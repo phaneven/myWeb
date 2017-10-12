@@ -1,12 +1,12 @@
-<md-sidenav-container>
-    <md-sidenav #sidenav class="example-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
-        <a md-button [routerLink]='["/home"]' (click)="clickLabel();">Home
+<app-menu></app-menu>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav class="example-sidenav" [mode]='mode' (window:resize)="setMode($event)" (positionChanged)="onClose()">
+        <a mat-button [routerLink]='["/home"]' (click)="clickLabel();">Home
         </a>
-        <a md-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog
+        <a mat-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog
         </a>
-        <!-- <a md-button [routerLink]='["/board"]'>Board
+        <!-- <a mat-button [routerLink]='["/board"]'>Board
         </a> -->
-    </md-sidenav>
-    <app-menu></app-menu>
+    </mat-sidenav>
     <app-content></app-content> 
-</md-sidenav-container>
+</mat-sidenav-container>

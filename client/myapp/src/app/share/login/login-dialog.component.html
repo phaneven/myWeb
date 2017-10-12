@@ -1,20 +1,20 @@
-<h1 md-dialog-title>Login</h1>
-<div md-dialog-content>
+<h1 mat-dialog-title>Login</h1>
+<div mat-dialog-content>
     <p>username</p>
-    <md-form-field>
-        <input mdInput [(ngModel)]='data.username' name='username'>
-        <!-- <input mdInput> -->
-    </md-form-field>  
+    <mat-form-field>
+        <input matInput [(ngModel)]='data.username' name='username'>
+        <!-- <input matInput> -->
+    </mat-form-field>  
     <p>password</p>
-    <md-form-field>
-        <input mdInput [(ngModel)]='data.password' name='password'>
-    </md-form-field> 
+    <mat-form-field>
+        <input matInput [(ngModel)]='data.password' name='password'>
+    </mat-form-field> 
     {{data.username}}
     {{data.password}}
 </div>
 
-<div md-dialog-actions>
-    <button md-button (click)="logIn()" tabindex="0">Login</button>
-    <button md-button (click)="signUp()" tabindex="-1">Sign Up</button>
+<div mat-dialog-actions>
+    <button mat-button (click)="logIn()" tabindex="0">Login</button>
+    <button mat-button (click)="signUp()" tabindex="-1">Sign Up</button>
 </div>
 

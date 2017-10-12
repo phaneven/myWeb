@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'blog-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    // tslint:disable-next-line:component-selector
+    selector: 'blog-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  tile = {cols: 3, rows: 1, color: 'black'}
+    // tslint:disable-next-line:member-ordering
+    tile = { cols: 3, rows: 1, color: 'black' };
 }

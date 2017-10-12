@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 // import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Http } from '@angular/http';
-import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
     username: string;
     password: string;
     isLogin: boolean;
-    constructor(public dialog: MdDialog) { }
+    constructor(public dialog: MatDialog) { }
 
     ngOnInit() {
     }
@@ -41,8 +41,8 @@ export class LoginDialogComponent {
     public isLogin = false;
     public messageInfo;
     constructor(
-        public dialogRef: MdDialogRef<LoginDialogComponent>,
-        @Inject(MD_DIALOG_DATA) public data: any, private http: Http) {}
+        public dialogRef: MatDialogRef<LoginDialogComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: any, private http: Http) {}
 
     clickLater(): void {
         this.dialogRef.close();

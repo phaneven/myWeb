@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Input, ViewChild } from '@angular/core';
-import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
 import { Http } from '@angular/http';
 
@@ -10,7 +10,7 @@ import { Http } from '@angular/http';
     styleUrls: ['./blog-board.component.css']
 })
 export class BlogBoardComponent implements OnInit {
-    constructor(public dialog: MdDialog) { }
+    constructor(public dialog: MatDialog) { }
 
     ngOnInit() {
     }
@@ -35,8 +35,8 @@ export class BlogEditorComponent implements OnInit {
     @ViewChild('editor') editor: QuillEditorComponent;
     public messageInfo;
     constructor(
-        public dialogRef: MdDialogRef<BlogEditorComponent>,
-        @Inject(MD_DIALOG_DATA) public data: any, private http: Http) {}
+        public dialogRef: MatDialogRef<BlogEditorComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: any, private http: Http) {}
 
     ngOnInit(): void {
         this.editor.onContentChanged.subscribe(data => this.editor.content = data);

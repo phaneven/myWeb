@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { MdSlideToggle } from '@angular/material';
+import { MatSlideToggle } from '@angular/material';
 @Component({
     // tslint:disable-next-line:component-selector
     selector: 'blog-tools',

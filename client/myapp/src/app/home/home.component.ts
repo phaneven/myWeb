@@ -1,5 +1,5 @@
 import { Component, Input, Output, AfterContentInit } from '@angular/core';
-import { MdSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material';
 import { ViewChild } from '@angular/core';
 import { EmitterService } from '../emitter.service';
 
@@ -11,7 +11,7 @@ import { EmitterService } from '../emitter.service';
 export class HomeComponent implements AfterContentInit {
     public menuToggle: boolean;
     public mode: string;
-    @ViewChild('sidenav') sidenav: MdSidenav;
+    @ViewChild('sidenav') sidenav: MatSidenav;
     @Input() toggle: boolean;
     @Output() id = '_menu';
     constructor() {

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdSidenavModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+import { MyOwnCustomMaterialModule } from '../material-module';
 /* App Root*/
 import { HomeComponent } from './home.component';
 import { ShareModule } from '../share/share.module';
@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
         RouterModule,
         BrowserAnimationsModule,
         ShareModule,
-        MdButtonModule, MdCardModule, MdSidenavModule, MdMenuModule, MdToolbarModule, MdIconModule
+        MyOwnCustomMaterialModule
     ],
     exports: [
     ]

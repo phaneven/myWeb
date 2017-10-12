@@ -3,11 +3,11 @@
     display: flex;
     overflow: auto;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: white;
 }
 
-.md-card-actions {
+.mat-card-actions {
     display: inline-flex;
 }
 

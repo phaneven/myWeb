@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, Output, AfterContentInit } from '@angular/core';
 import { EmitterService } from '../emitter.service';
-import { MdSidenav } from '@angular/material';
+import { MatSidenav} from '@angular/material';
 
 @Component({
   selector: 'app-blog',
@@ -10,7 +10,7 @@ import { MdSidenav } from '@angular/material';
 export class BlogComponent implements AfterContentInit {
     public menuToggle: boolean;
     public mode: string;
-    @ViewChild('sidenav') sidenav: MdSidenav;
+    @ViewChild('sidenav') sidenav: MatSidenav;
     @Input() toggle: boolean;
     @Output() id = '_menu';
     constructor() {
@@ -42,11 +42,13 @@ export class BlogComponent implements AfterContentInit {
 
     setMode(event) {
         const width = event.target.innerWidth;
+        console.log(width);
         if (width < 500) {
             this.mode = 'over';
         } else {
             this.mode = 'side';
         }
+        console.log(this.mode);
     }
 
     clickLabel() {
