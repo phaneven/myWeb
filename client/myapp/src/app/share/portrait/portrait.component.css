@@ -1,6 +1,8 @@
 img {
-    width: 17vh;
-    height: 17vh;
+    width: 115px;
+    height: 115px;
+    /* min-width: 14px;
+    min-height: 14px; */
     border-radius: 50%;
 }
 
@@ -8,8 +10,10 @@ img {
     position: relative;
     margin: 0 auto;
     margin-top: -9vh;
-    width: 18vh;
-    height: 18vh;
+    width: 120px;
+    height: 120px;
+    /* min-width: 15px;
+    min-height: 15px; */
     background-color: silver;
     border-radius: 50%;
     z-index: 1px;
