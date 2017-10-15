@@ -2,18 +2,35 @@
     <ul>
         <li *ngFor="let article of choosedArticles">
             <mat-card class="blog-card" role="group">
-                <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <mat-card-header class="blog-header">
+                    <span class="spacer"></span>
+                    <span class="blog-title-content">{{article.title}}</span>
                 </mat-card-header>
-                <mat-card-content [innerHTML]='article.content | safeHtml'>
+                <mat-card-content class="blog-text"> 
+                    <div class="blog-brief" [innerHTML]='article.overview | safeHtml'></div>
+                    <a class="blog-link" href=''>read more</a>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
+                <mat-card-actions class="blog-buttons">
+                    <span class="spacer"></span>
+                    <i class="material-icons">share</i>
+                    <i class="material-icons">favorite_border</i>
                 </mat-card-actions>
             </mat-card>
         </li>
+        <!-- <li *ngFor="let article of choosedArticles">
+            <mat-card class="blog-card" role="group">
+                <mat-card-header class="blog-header">
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content class="blog-text" [innerHTML]='article.content | safeHtml'>
+                </mat-card-content>
+                <mat-card-actions class="blog-buttons">
+                    <button mat-raised-button>LIKE</button>
+                    <button mat-raised-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </li> -->
     </ul>
     <mat-paginator [length]="length" [(pageSize)]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onChange($event)"></mat-paginator>
 </div>

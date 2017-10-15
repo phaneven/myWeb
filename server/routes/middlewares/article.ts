@@ -21,33 +21,57 @@ let checkArticle = async (req, res) => {
 
 
 let addArticle = async (req, res) => {
-    let content = req.body.content
+    let title = req.body.title;
+    let overview = req.body.overview;
+    let content = req.body.content;
+    let date = req.body.date;
+    
     
     let connector: DatabaseHandler<IArticle>= await Article.findOne({
-        content: content
+        title: title
     });
 
     let article = connector.value();
     let err = connector.error();
     
-    if (article) {
-        // send({err: 'The username has been registered'}, 501);
-        console.log('The username has been registered');
-    } else {
-        Article.create(
-            {
-                content: content
-            }
-        ).save((err)=> {
-            if (err) {
-                res.status(400)
-                   .send({err: err});
-            }else {
-                res.status(200)
-                   .send({message: 'OK'});
-            }
-        })
-    }  
+    // if (article) {
+    //     // send({err: 'The username has been registered'}, 501);
+    //     console.log('The username has been registered');
+    // } else {
+    //     Article.create(
+    //         {
+    //             title: title,
+    //             content: content,
+    //             date: date
+    //         }
+    //     ).save((err)=> {
+    //         if (err) {
+    //             res.status(400)
+    //                .send({err: err});
+    //         }else {
+    //             console.log("new article: " + date);
+    //             res.status(200)
+    //                .send({message: 'OK'});
+    //         }
+    //     })
+    // }  
+    Article.create(
+        {
+            title: title,
+            overview: overview,
+            content: content,
+            date: date
+        }
+    ).save((err)=> {
+        if (err) {
+            res.status(400)
+               .send({err: err});
+        }else {
+            console.log("new article: " + date);
+            res.status(200)
+               .send({message: 'OK'});
+        }
+    })
 };
 
 let postArticle = async (req, res) => {

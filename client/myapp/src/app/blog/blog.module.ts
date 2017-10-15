@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyOwnCustomMaterialModule} from '../material-module';
-
+import { FormsModule } from '@angular/forms';
 import { BlogComponent } from './blog.component';
 import { HeaderComponent } from './header/header.component';
 import { BlogContentComponent, SafeHtmlPipe } from './blog-content/blog-content.component';
@@ -19,7 +19,8 @@ import { QuillModule } from 'ngx-quill';
         ShareModule,
         RouterModule,
         MyOwnCustomMaterialModule,
-        QuillModule
+        QuillModule,
+        FormsModule
     ],
     declarations: [
         BlogComponent,

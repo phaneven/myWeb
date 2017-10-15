@@ -1,11 +1,17 @@
 import { Document, model, Model, Schema } from 'mongoose';
 
 let ArticleSchema: Schema = new Schema({
-    content: {type: String},
+    title: String,
+    overview: String,
+    content: String,
+    date: Date,
 })
 
 export interface IArticleModel {
-    content: {type: String, required: true},
+    title: {type: String, required: true},
+    overview: String,
+    content: {type: String},
+    date: Date,
 }
 
 export interface IArticle extends Document, IArticleModel {}

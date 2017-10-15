@@ -20,8 +20,73 @@ ul {
 }
 .blog-card {
     text-align: left;
-    height: 200px;
+    height: 400px;
+    padding: 0;
     margin-bottom: 5vh;
     position: static;
+}
+
+.blog-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    padding: 0;
+    margin: 0;
+    background-color: grey;
+    text-align: left;
+}
+
+.blog-title-content {
+    padding: 30px;
+    font-weight: 400px;
+}
+
+.blog-text {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 0;
+    margin: 0 auto;
+}
+
+.blog-brief{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    max-width: 70%;
+    padding: 30px;
+}
+
+/* .blog-brief p:first-child {
+    background: gold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+} */
+
+.blog-link {
+    display: flex;
+    align-items: center;
+}
+
+.blog-buttons {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0 auto;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.blog-buttons i {
+    padding-left: 0.5em;
 }
 

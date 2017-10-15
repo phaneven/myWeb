@@ -11,7 +11,7 @@ import { Http } from '@angular/http';
 })
 export class BlogBoardComponent implements OnInit {
     constructor(public dialog: MatDialog) { }
-
+    title: string;
     ngOnInit() {
     }
 
@@ -19,6 +19,7 @@ export class BlogBoardComponent implements OnInit {
         const dialogRef = this.dialog.open(BlogEditorComponent, {
             width: '80%',
             height: '520px',
+            data: {title: this.title}
         });
     }
 
@@ -43,11 +44,13 @@ export class BlogEditorComponent implements OnInit {
     }
 
     onClick () {
-        // console.log(this.editor.content.html.content);
-        // console.log(this.editor.content);
         const body = {
-            content: this.editor.content.html
+            title: this.data.title,
+            overview: this.editor.content.html.match(/<p>([^<br>].*?)<\/p>/),
+            content: this.editor.content.html,
+            date: new Date(),
         };
+        console.log(this.data.title);
         this.http.post('http://localhost:8888/blog/addArticle', body)
             // .map(res => res.json())
             .subscribe(
