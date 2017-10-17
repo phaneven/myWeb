@@ -5,6 +5,7 @@ let ArticleSchema: Schema = new Schema({
     overview: String,
     content: String,
     date: Date,
+    anchor: String
 })
 
 export interface IArticleModel {
@@ -12,6 +13,7 @@ export interface IArticleModel {
     overview: String,
     content: {type: String},
     date: Date,
+    anchor: String
 }
 
 export interface IArticle extends Document, IArticleModel {}

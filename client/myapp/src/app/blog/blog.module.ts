@@ -11,7 +11,7 @@ import { ShareModule } from '../share/share.module';
 import { ToolsComponent } from './tools/tools.component';
 import { BlogBoardComponent, BlogEditorComponent } from './blog-board/blog-board.component';
 import { QuillModule } from 'ngx-quill';
-
+import { BlogPageComponent } from './blog-page/blog-page.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -20,7 +20,7 @@ import { QuillModule } from 'ngx-quill';
         RouterModule,
         MyOwnCustomMaterialModule,
         QuillModule,
-        FormsModule
+        FormsModule,
     ],
     declarations: [
         BlogComponent,
@@ -29,7 +29,8 @@ import { QuillModule } from 'ngx-quill';
         ToolsComponent,
         BlogBoardComponent,
         BlogEditorComponent,
-        SafeHtmlPipe
+        SafeHtmlPipe,
+        BlogPageComponent,
     ],
     exports: [],
     entryComponents: [BlogEditorComponent]

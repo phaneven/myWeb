@@ -25,8 +25,8 @@ let addArticle = async (req, res) => {
     let overview = req.body.overview;
     let content = req.body.content;
     let date = req.body.date;
-    
-    
+    let anchor = req.body.title.replace(/ /g, '-').toLowerCase();
+
     let connector: DatabaseHandler<IArticle>= await Article.findOne({
         title: title
     });
@@ -60,7 +60,8 @@ let addArticle = async (req, res) => {
             title: title,
             overview: overview,
             content: content,
-            date: date
+            date: date,
+            anchor: anchor
         }
     ).save((err)=> {
         if (err) {
@@ -86,8 +87,24 @@ let postArticle = async (req, res) => {
     }
 }
 
+let findArticle = async (req, res) => {
+    // let date = new Date(req.body.date);
+    let anchor = req.body.anchor.toLowerCase();
+    console.log(anchor);
+    let connector: DatabaseHandler<IArticle>= await Article.findOne({anchor: anchor});
+    let article = connector.value();
+    let err = connector.error();
+
+    if (article) {
+        res.status(200).send({article: article})
+    } else {
+        res.status(404).send({err: err})
+    }
+}
+
 export default [
     new ServerRouter('/blog').addMethod(new ServerMethod(METHOD.POST, '/addArticle').end(addArticle)),
     new ServerRouter('/blog').addMethod(new ServerMethod(METHOD.GET, '/postArticle').end(postArticle)),
+    new ServerRouter('/blog').addMethod(new ServerMethod(METHOD.POST, '/findArticle').end(findArticle)),
 ]
 

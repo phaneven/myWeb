@@ -42,8 +42,10 @@ class App {
         this.express.use(express.static(path.join(pathInfo.rootPath, "client/myapp/dist")));
         this.express.use(ServerRequestRouter[0].Path, ServerRequestRouter[0].Router); //registration
         this.express.use(ServerRequestRouter[1].Path, ServerRequestRouter[1].Router); //login
+
         this.express.use(ServerArticleRouter[0].Path, ServerArticleRouter[0].Router); //add article
-        this.express.use(ServerArticleRouter[1].Path, ServerArticleRouter[1].Router);
+        this.express.use(ServerArticleRouter[1].Path, ServerArticleRouter[1].Router); //post articles
+        this.express.use(ServerArticleRouter[2].Path, ServerArticleRouter[2].Router); //find article
     }
 
     private routes():void {

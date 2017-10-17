@@ -1,14 +1,14 @@
 <!-- <div class="popup"> -->
-    <h1 mat-dialog-title>Blog Editor</h1>
-    <mat-form-field style="width: 100%" color="primary">
-        <input matInput placeholder="Title" [(ngModel)]='data.title' name='title' required>
-    </mat-form-field>
-    <div mat-dialog-content id="editor-container">
-        <quill-editor #editor theme="snow" [style]="{height: '300px', width: '100%'}" ></quill-editor>
-    </div>
+<h1 mat-dialog-title>Blog Editor</h1>
+<mat-form-field style="width: 100%" color="primary">
+    <input matInput placeholder="Title" [(ngModel)]='data.title' name='title' required>
+</mat-form-field>
+<div mat-dialog-content id="editor-container">
+    <quill-editor #editor theme="snow" [style]="{height: '300px', width: '100%'}"></quill-editor>
+</div>
 
-    <div class='editor-button'>
-        <span class="spacer"></span>
-        <button mat-raised-button color="warn" (click)="onClick();">Submit</button>
-    </div>
+<div class='editor-button'>
+    <span class="spacer"></span>
+    <button mat-raised-button color="warn" (click)="onClick();">Submit</button>
+</div>
 <!-- </div> -->

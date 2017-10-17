@@ -19,7 +19,7 @@ export class BlogBoardComponent implements OnInit {
         const dialogRef = this.dialog.open(BlogEditorComponent, {
             width: '80%',
             height: '520px',
-            data: {title: this.title}
+            data: { title: this.title }
         });
     }
 
@@ -37,16 +37,16 @@ export class BlogEditorComponent implements OnInit {
     public messageInfo;
     constructor(
         public dialogRef: MatDialogRef<BlogEditorComponent>,
-        @Inject(MAT_DIALOG_DATA) public data: any, private http: Http) {}
+        @Inject(MAT_DIALOG_DATA) public data: any, private http: Http) { }
 
     ngOnInit(): void {
         this.editor.onContentChanged.subscribe(data => this.editor.content = data);
     }
 
-    onClick () {
+    onClick() {
         const body = {
             title: this.data.title,
-            overview: this.editor.content.html.match(/<p>([^<br>].*?)<\/p>/),
+            overview: this.editor.content.html.match(/<p>(?!.*<br>).*<\/p>/),
             content: this.editor.content.html,
             date: new Date(),
         };
@@ -54,8 +54,8 @@ export class BlogEditorComponent implements OnInit {
         this.http.post('http://localhost:8888/blog/addArticle', body)
             // .map(res => res.json())
             .subscribe(
-                // data => console.log(data),
-                // error => console.log(error)
+            // data => console.log(data),
+            // error => console.log(error)
             );
         this.dialogRef.close();
     }

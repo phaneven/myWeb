@@ -38,7 +38,8 @@ class App {
         this.express.use(user_1.default[0].Path, user_1.default[0].Router); //registration
         this.express.use(user_1.default[1].Path, user_1.default[1].Router); //login
         this.express.use(article_1.default[0].Path, article_1.default[0].Router); //add article
-        this.express.use(article_1.default[1].Path, article_1.default[1].Router);
+        this.express.use(article_1.default[1].Path, article_1.default[1].Router); //post articles
+        this.express.use(article_1.default[2].Path, article_1.default[2].Router); //find article
     }
     routes() {
         let router = express.Router();
