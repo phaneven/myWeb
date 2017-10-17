@@ -14,7 +14,10 @@ import { BlogService } from '../blog.service';
 })
 export class BlogPageComponent implements AfterContentInit {
     public title: string;
-    public article;
+    public article = {
+        title: '',
+        content: ''
+    };
     constructor(
         private route: ActivatedRoute,
         private location: Location,
@@ -32,7 +35,8 @@ export class BlogPageComponent implements AfterContentInit {
         this.route.paramMap
         .switchMap((params: ParamMap) => this.blogService.getArticle(params.get('id')))
         .subscribe(data => {
-            this.article = data;
+            this.article = data.article;
+            console.log(this.article);
         });
     }
 }

@@ -4,14 +4,9 @@ import { Http } from '@angular/http';
 export class BlogService {
     constructor (private http: Http) {}
     getArticle(id: string) {
-        return new Promise((resolve, reject) => {
-            this.http
+        return this.http
                 .post('http://localhost:8888/blog/findArticle', {anchor: id})
-                .map(data => data.json()).subscribe(data => {
-                    const article = data.article;
-                    resolve(article.content);
-                });
-        });
+                .map(data => data.json());
         // return Promise.resolve('1');
     }
 }
