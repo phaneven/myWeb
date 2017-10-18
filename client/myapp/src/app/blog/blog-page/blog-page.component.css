@@ -1,4 +1,4 @@
-.article-content {
+.article-container {
     flex: 1;
     width: 90%;
     max-width: 700px;
@@ -6,3 +6,4 @@
     margin: 0 auto;
     align-content: center;
 }
+

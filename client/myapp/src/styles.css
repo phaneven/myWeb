@@ -14,3 +14,7 @@ body .blog-brief p:first-child {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.article-content img{
+    width: 100%;
+}
