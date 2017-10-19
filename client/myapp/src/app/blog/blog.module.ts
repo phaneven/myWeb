@@ -8,8 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { BlogContentComponent, SafeHtmlPipe } from './blog-content/blog-content.component';
 import { RouterModule } from '@angular/router';
 import { ShareModule } from '../share/share.module';
+import { BlogBoardModule } from './blog-board/blog-board.module';
+
 import { ToolsComponent } from './tools/tools.component';
-import { BlogBoardComponent, BlogEditorComponent } from './blog-board/blog-board.component';
+// import { BlogBoardComponent} from './blog-board/blog-board.component';
+import { BlogEditorComponent } from './blog-board/blog-editor/blog-editor.component';
 import { QuillModule } from 'ngx-quill';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 @NgModule({
@@ -27,12 +30,12 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
         HeaderComponent,
         BlogContentComponent,
         ToolsComponent,
-        BlogBoardComponent,
-        BlogEditorComponent,
         SafeHtmlPipe,
         BlogPageComponent,
     ],
     exports: [],
-    entryComponents: [BlogEditorComponent]
+    entryComponents: [
+        BlogEditorComponent
+    ]
 })
 export class BlogModule { }
