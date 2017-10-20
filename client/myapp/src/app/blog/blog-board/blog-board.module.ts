@@ -5,6 +5,7 @@ import { QuillModule } from 'ngx-quill';
 
 import { BlogEditorComponent } from './blog-editor/blog-editor.component';
 import { BlogBoardComponent } from './blog-board.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { BlogBoardComponent } from './blog-board.component';
     ],
     declarations: [
         BlogEditorComponent,
-        BlogBoardComponent
+        BlogBoardComponent,
+        BlogListComponent
     ],
 })
 export class BlogBoardModule { }

@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav class="example-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
+    <mat-sidenav #sidenav class="home-sidenav" [mode]='mode' (window:resize)="setMode($event)" (close)="onClose()">
         <a mat-button [routerLink]='["/home"]' (click)="clickLabel();">Home
         </a>
         <a mat-button [routerLink]='["/blog"]' (click)="clickLabel()">Blog
