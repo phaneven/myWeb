@@ -35,6 +35,8 @@ ul {
     margin: 0;
     background-color: grey;
     text-align: left;
+    color: white;
+    font-size: 150%;
 }
 
 .blog-title-content {
