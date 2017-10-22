@@ -40,6 +40,11 @@ export class BlogContentComponent implements OnInit {
         this.choosedArticles = this.articles
             .slice(this.pageSize * this.currentPageIndex, this.pageSize * (this.currentPageIndex + 1));
     }
+
+    setBackground () {
+        const style = {'background': 'url(../../../assets/images/blog-header-background.jpg)'};
+        return style;
+    }
 }
 
 @Pipe({ name: 'safeHtml' })

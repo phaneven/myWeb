@@ -22,9 +22,10 @@ export class BlogEditorComponent implements OnInit {
     }
 
     onClick() {
+        const temp = this.editor.content.html.replace(/<p><br><\/p>/g, '');
         const body = {
             title: this.data.title,
-            overview: this.editor.content.html.match(/<p>(?!.*<br>).*<\/p>/),
+            overview: temp.match(/<p>(?!.*<img).*<\/p>/),
             content: this.editor.content.html,
             date: new Date(),
         };
@@ -32,9 +33,14 @@ export class BlogEditorComponent implements OnInit {
         this.http.post('http://localhost:8888/blog/addArticle', body)
             // .map(res => res.json())
             .subscribe(
-            // data => console.log(data),
-            // error => console.log(error)
+                data => {},
+                error => console.log(error)
             );
         this.dialogRef.close();
+    }
+
+    fileChange(event: Event) {
+        // let fileList: FileList = event.target.files;
+
     }
 }

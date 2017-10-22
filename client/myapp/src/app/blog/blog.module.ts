@@ -24,6 +24,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
         MyOwnCustomMaterialModule,
         QuillModule,
         FormsModule,
+        BlogBoardModule
     ],
     declarations: [
         BlogComponent,

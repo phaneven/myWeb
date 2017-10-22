@@ -26,12 +26,6 @@ export class BlogPageComponent implements AfterContentInit {
     ) { }
 
     ngAfterContentInit() {
-        // this.route.paramMap
-        //     .switchMap((params: ParamMap) => this.blogService.getArticle(params.get('id')))
-        //     .subscribe(data => {
-        //         console.log(data);
-        //         this.article = data;
-        //     });
         this.route.paramMap
         .switchMap((params: ParamMap) => this.blogService.getArticle(params.get('id')))
         .subscribe(data => {

@@ -2,7 +2,7 @@
     <ul>
         <li *ngFor="let article of choosedArticles">
             <mat-card class="blog-card" role="group">
-                <mat-card-header class="blog-header">
+                <mat-card-header class="blog-header" [ngStyle]='setBackground()'>
                     <span class="spacer"></span>
                     <span class="blog-title-content">{{article.title}}</span>
                 </mat-card-header>
@@ -17,20 +17,6 @@
                 </mat-card-actions>
             </mat-card>
         </li>
-        <!-- <li *ngFor="let article of choosedArticles">
-            <mat-card class="blog-card" role="group">
-                <mat-card-header class="blog-header">
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content class="blog-text" [innerHTML]='article.content | safeHtml'>
-                </mat-card-content>
-                <mat-card-actions class="blog-buttons">
-                    <button mat-raised-button>LIKE</button>
-                    <button mat-raised-button>SHARE</button>
-                </mat-card-actions>
-            </mat-card>
-        </li> -->
     </ul>
     <mat-paginator [length]="length" [(pageSize)]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onChange($event)"></mat-paginator>
 </div>

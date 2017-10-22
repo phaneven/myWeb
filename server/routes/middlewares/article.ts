@@ -76,7 +76,7 @@ let addArticle = async (req, res) => {
 };
 
 let postArticle = async (req, res) => {
-    let connector: DatabaseHandler<Array<IArticle>>= await Article.find({});
+    let connector: DatabaseHandler<Array<IArticle>>= await Article.find({}, '-date');
     let articles = connector.value();
     let err = connector.error();
 

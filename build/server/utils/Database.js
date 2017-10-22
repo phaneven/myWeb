@@ -23,11 +23,11 @@ class DatabaseModel {
             });
         });
     }
-    find(query, select) {
+    find(query, rule, select) {
         return new Promise((resolve, reject) => {
             this._model.find(query, select, (err, res) => {
                 resolve(this.createDatabaseHandler(err, res));
-            });
+            }).sort(rule);
         });
     }
     create(document) {

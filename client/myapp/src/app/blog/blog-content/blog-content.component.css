@@ -33,7 +33,8 @@ ul {
     height: 70%;
     padding: 0;
     margin: 0;
-    background-color: grey;
+    /* background-color: grey; */
+    /* background-image: url('../../../assets/images/blog-header-background.jpg'); */
     text-align: left;
     color: white;
     font-size: 150%;

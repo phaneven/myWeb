@@ -31,11 +31,11 @@ class DatabaseModel<T extends Document, U> {
         });
     }
 
-    find(query: Object, select?: String) {
+    find(query: Object, rule?: String, select?: String) {
         return new Promise<DatabaseHandler<Array<T>>>((resolve, reject) => {
             this._model.find(query, select, (err, res) => {
                 resolve(this.createDatabaseHandler<Array<T>>(err, res));
-            })
+            }).sort(rule);
         });
     }
     
