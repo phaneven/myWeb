@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Http } from '@angular/http';
+import { Http, RequestOptions } from '@angular/http';
 
 @Component({
     // tslint:disable-next-line:component-selector
@@ -11,7 +11,9 @@ import { Http } from '@angular/http';
 })
 
 export class BlogEditorComponent implements OnInit {
+    @ViewChild('fileInput') fileInput;
     @ViewChild('editor') editor: QuillEditorComponent;
+    public formImg;
     public messageInfo;
     constructor(
         public dialogRef: MatDialogRef<BlogEditorComponent>,
@@ -36,11 +38,21 @@ export class BlogEditorComponent implements OnInit {
                 data => {},
                 error => console.log(error)
             );
+        this.http.post('http://localhost:8888/blog/pageImages', this.formImg)
+            .subscribe();
+
+
         this.dialogRef.close();
     }
 
     fileChange(event: Event) {
-        // let fileList: FileList = event.target.files;
-
+        console.log(this.fileInput.nativeElement.files[0]);
+        const fileBrowser = this.fileInput.nativeElement;
+        // this.bgImg = new FormData();
+        // this.bgImg.append('image', fileBrowser.files[0]);
+        const bgImg = fileBrowser.files[0];
+        this.formImg = new FormData();
+        this.formImg.append('fileInput', bgImg, bgImg.name);
+        console.log(this.formImg);
     }
 }

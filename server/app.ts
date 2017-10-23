@@ -4,6 +4,7 @@ import * as logger from "morgan";
 import * as ejs from 'ejs';
 import ServerRequestRouter from './routes/middlewares/user';
 import ServerArticleRouter from './routes/middlewares/article'; 
+import ServerUploader from './routes/middlewares/upload';
 const bodyParser = require('body-parser');
 var history = require('connect-history-api-fallback'); // make browser could refresh
 
@@ -46,6 +47,8 @@ class App {
         this.express.use(ServerArticleRouter[0].Path, ServerArticleRouter[0].Router); //add article
         this.express.use(ServerArticleRouter[1].Path, ServerArticleRouter[1].Router); //post articles
         this.express.use(ServerArticleRouter[2].Path, ServerArticleRouter[2].Router); //find article
+
+        this.express.use(ServerUploader[0].Path, ServerUploader[0].Router); // upload
     }
 
     private routes():void {

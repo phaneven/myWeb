@@ -102,6 +102,8 @@ let findArticle = async (req, res) => {
     }
 }
 
+
+
 export default [
     new ServerRouter('/blog').addMethod(new ServerMethod(METHOD.POST, '/addArticle').end(addArticle)),
     new ServerRouter('/blog').addMethod(new ServerMethod(METHOD.GET, '/postArticle').end(postArticle)),
